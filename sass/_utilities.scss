@@ -1,0 +1,69 @@
+//LAYOUT
+.d-flex{
+    display: flex;
+}
+
+.icon-ctn{
+   justify-content: end;
+    width: 100%;
+    z-index: 1;
+    height: 70px;
+}
+.ctn {
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -2em;
+
+}
+.text-end {
+  text-align: end;
+}
+
+//COLORS
+.bg-dark-blue{
+    background-color: $dark-blue-color
+}
+.active {
+    color: white;
+}
+
+//PADDINGS, MARGINS //BORDERS
+.p-1{
+    padding: 1em;
+}
+.p-2 {
+    padding: 1em 0;
+}
+.p-3 {
+    padding: 0 1em;
+}
+.p-4 {
+    padding: 2em;
+}
+.border-radius {
+    border-radius: $border-radius;
+}
+
+//FONT 
+.fs-1 {
+    font-size: $fs-1 ;
+}
+.fs-2{
+    font-size: $fs-2;
+}
+.fs-3 {
+    font-size: $fs-3;
+}
+.fs-4 {
+    font-size: $fs-4;
+}
+.fw-1{
+    font-weight: $fw-small;
+}
+.fw-2{
+    font-weight: $fw-normal;
+}
+.fw-3{
+    font-weight: $fw-large;
+}

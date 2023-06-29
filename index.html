@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <link rel="stylesheet" href="dist/css/style.css">
+</head>
+
+<body>
+  <header class="p-1">
+    <figure class="d-flex p-4 border-radius">
+      <img src="images/image-jeremy.png" alt="Avatar">
+
+      <figcaption>
+        Report for <span class="name"><br>Jeremy Robson</span>
+        
+      </figcaption>
+    </figure>
+    
+    <div class="d-flex bg-dark-blue p-4 border-radius fw-1">
+      <button id="daily" class="timeframe-button">Daily</button>
+      <button id="weekly" class="timeframe-button">Weekly</button>
+      <button id="monthly" class="timeframe-button">Monthly</button>
+    </div>
+  </header>
+  
+  <main class="p-3">
+    <section class="p-2" data-title="Work">
+      <div class="d-flex icon-ctn border-radius orange">
+        <img src="images/icon-work.svg" class="p-3">
+      </div>
+      
+      <div class="d-flex ctn bg-dark-blue p-4 border-radius">
+        <p><span class="fs-2">Work</span>
+          <br><span class="fw-1 fs-4 hour">32</span>
+        </p>
+        
+        <p class="text-end">
+       ***<br><span class=" fw-1 previous">Last Week - 36 </span>
+        
+        </p>
+         
+      </div>
+      
+    </section>
+
+    <section class="p-2" data-title="Play">
+      <div class="d-flex icon-ctn border-radius blue">
+        <img src="images/icon-play.svg" class="p-3">
+      </div>
+    
+      <div class="d-flex ctn bg-dark-blue p-4 border-radius">
+        <p><span class="fs-2">Play</span>
+          <br><span class="fw-1 fs-4 hour">10</span>
+        </p>
+        
+        <p class="text-end">
+         ***<br><span class=" fw-1 previous">Last Week - 8</span>
+          
+        </p>
+        
+      </div>
+       
+    </section>
+
+    <section class="p-2" data-title="Study">
+      <div class="d-flex icon-ctn border-radius  red">
+        <img src="images/icon-study.svg" class="p-3">
+      </div>
+    
+      <div class="d-flex ctn bg-dark-blue p-4 border-radius">
+        <p><span class="fs-2">Study</span>
+          <br><span class="fw-1 fs-4 hour">4</span>
+        </p>
+
+
+        <p class="text-end">
+         ***<br><span class=" fw-1"> Last Week - 7 </span>
+         
+        </p>
+
+      </div>
+      
+    </section>
+
+    <section class="p-2" data-title="Exercise">
+      <div class="d-flex icon-ctn border-radius  green">
+        <img src="images/icon-exercise.svg" class="p-3">
+      </div>
+
+      <div class="d-flex ctn bg-dark-blue p-4 border-radius">
+        <p><span class="fs-2">Exercise</span>
+          <br><span class="fw-1 fs-4 hour">4</span>
+        </p>
+        
+        <p class="text-end">
+         ***<br><span class=" fw-1 previous">Last Week - 5 </span>
+          
+        </p>
+        
+      </div>
+        
+    </section>
+
+    <section class="p-2" data-title="Social">
+      <div class="d-flex icon-ctn border-radius  violet">
+        <img src="images/icon-social.svg" class="p-3">
+      </div>
+    
+      <div class="d-flex ctn bg-dark-blue p-4 border-radius">
+        <p><span class="fs-2">Social</span>
+          <br><span class="fw-1 fs-4 hour">5</span>
+        </p>
+        
+        <p class="text-end">
+         ***<br><span class=" fw-1 previous">Last Week - 10</span>
+          
+        </p>
+      
+      </div>
+       
+    </section>
+
+    <section class="p-2" data-title="Self Care">
+      <div class="d-flex icon-ctn border-radius  yellow">
+        <img src="images/icon-self-care.svg" class="p-3">
+      </div>
+      
+      <div class="d-flex ctn bg-dark-blue p-4 border-radius">
+        <p><span class="fs-2">Self Care</span>
+          <br><span class="fw-1 fs-4 hour">2</span>
+        </p>
+
+        <p class="text-end">
+         ***<br><span class=" fw-1 previous">Last Week - 2 </span>
+          
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="p-1">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.<br>
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

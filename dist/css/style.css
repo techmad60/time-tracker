@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: hsl(226, 43%, 10%);
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: hsl(235, 46%, 20%);
+  border: none;
+  color: hsl(235, 45%, 61%);
+  font-size: 18px;
+ 
+}
+
+button:hover {
+  color: aqua;
+  cursor: pointer;
+}
+
+figure {
+  color: white;
+  background-color: hsl(246, 80%, 60%);
+  font-weight: 300;
+  align-items: center;
+  height: 90px;
+}
+figure img {
+  width: 75px;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin-right: 1em;
+}
+figure .name {
+  font-size: 1.5rem;
+}
+figure + div {
+  position: relative;
+  margin-top: -1em;
+  z-index: -1;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section p {
+  line-height: 2em;
+}
+
+footer {
+  text-align: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.icon-ctn {
+  justify-content: end;
+  width: 100%;
+  z-index: 1;
+  height: 70px;
+}
+
+.ctn {
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -2em;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.bg-dark-blue {
+  background-color: hsl(235, 46%, 20%);
+}
+
+.active {
+  color: white;
+}
+
+.p-1 {
+  padding: 1em;
+}
+
+.p-2 {
+  padding: 1em 0;
+}
+
+.p-3 {
+  padding: 0 1em;
+}
+
+.p-4 {
+  padding: 2em;
+}
+
+.border-radius {
+  border-radius: 10px;
+}
+
+.fs-1 {
+  font-size: 11px;
+}
+
+.fs-2 {
+  font-size: 18px;
+}
+
+.fs-3 {
+  font-size: 24px;
+}
+
+.fs-4 {
+  font-size: 32px;
+}
+
+.fw-1 {
+  font-weight: 300;
+}
+
+.fw-2 {
+  font-weight: 400;
+}
+
+.fw-3 {
+  font-weight: 500;
+}
+
+.orange {
+  background-color: hsl(15, 100%, 70%);
+}
+
+.blue {
+  background-color: hsl(195, 74%, 62%);
+}
+
+.red {
+  background-color: hsl(348, 100%, 68%);
+}
+
+.green {
+  background-color: hsl(145, 58%, 55%);
+}
+
+.violet {
+  background-color: hsl(264, 64%, 52%);
+}
+
+.yellow {
+  background-color: hsl(43, 84%, 65%);
+}
