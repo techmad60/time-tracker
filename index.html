@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Time tracking dashboard</title>
@@ -11,143 +11,217 @@
 </head>
 
 <body>
-  <header class="p-1">
-    <figure class="d-flex p-4 border-radius">
-      <img src="images/image-jeremy.png" alt="Avatar">
-
-      <figcaption>
-        Report for <span class="name"><br>Jeremy Robson</span>
-        
-      </figcaption>
-    </figure>
-    
-    <div class="d-flex bg-dark-blue p-4 border-radius fw-1">
-      <button id="daily" class="timeframe-button">Daily</button>
-      <button id="weekly" class="timeframe-button">Weekly</button>
-      <button id="monthly" class="timeframe-button">Monthly</button>
-    </div>
-  </header>
   
-  <main class="p-3">
-    <section class="p-2" data-title="Work">
-      <div class="d-flex icon-ctn border-radius orange">
-        <img src="images/icon-work.svg" class="p-3">
+  <div class="center-container">
+    <div class="text-overlay-container">
+      <p class="text-overlay">Click me !</p>
+    </div>
+    <div class="spin-wheel">
+      <div class="avatar-container">
+        <div class="cover"></div>
+        <img src="images/image-jeremy.png" alt="Avatar" class="">
       </div>
-      
-      <div class="d-flex ctn bg-dark-blue p-4 border-radius">
-        <p><span class="fs-2">Work</span>
-          <br><span class="fw-1 fs-4 hour">32</span>
-        </p>
-        
-        <p class="text-end">
-       ***<br><span class=" fw-1 previous">Last Week - 36 </span>
-        
-        </p>
-         
+      <div class="icon-container">
+        <img src="images/icon-work.svg" alt="Work">
+        <img src="images/icon-play.svg" alt="Play">
+        <img src="images/icon-study.svg" alt="Study">
+        <img src="images/icon-exercise.svg" alt="Exercise">
+        <img src="images/icon-social.svg" alt="Social">
+        <img src="images/icon-self-care.svg" alt="Self Care">
       </div>
-      
-    </section>
 
-    <section class="p-2" data-title="Play">
-      <div class="d-flex icon-ctn border-radius blue">
-        <img src="images/icon-play.svg" class="p-3">
-      </div>
+      
+    </div>
+    <div class="introduction">
+      <p>
+        Hi 👋 , My name is Jeremy Robinson, and this is a kind of time tracker on my activities, on a daily, weekly and monthly basis. <br>Rate me at the end ( show love 😊).
+      </p>
+    </div>
+    <div class="button-container">
+      <button class="next-btn" id="next-btn-one">Next</button>
+    </div>
+  </div>
+  
+   
+  
+  <div class="grid-container">
+    <div class="btn-container">
+      <i class="fa-solid fa-arrow-left btn" id="prev-btn-one"></i>
+    </div> 
     
-      <div class="d-flex ctn bg-dark-blue p-4 border-radius">
-        <p><span class="fs-2">Play</span>
-          <br><span class="fw-1 fs-4 hour">10</span>
-        </p>
-        
-        <p class="text-end">
-         ***<br><span class=" fw-1 previous">Last Week - 8</span>
+    <header class="p-1">
+     
+      <figure class="d-flex  p-4 border-radius">
+        <img src="images/image-jeremy.png" alt="Avatar">
+  
+        <figcaption>
+          Report for <span class="name"><br>Jeremy Robson</span>
           
-        </p>
+        </figcaption>
+      </figure>
+  
+      <div class="d-flex bg-dark-blue p-4 border-radius fw-1">
+        <p id="daily" class="timeframe-button ">Daily</p>
+        <p id="weekly" class="timeframe-button active">Weekly</p>
+        <p id="monthly" class="timeframe-button">Monthly</p>
+      </div>
+    </header>
+
+    <main class="p-3">
+      <section class="p-2" data-title="Work">
+        <div class="d-flex icon-ctn border-radius orange">
+          <img src="images/icon-work.svg" class="p-3">
+        </div>
         
-      </div>
-       
-    </section>
-
-    <section class="p-2" data-title="Study">
-      <div class="d-flex icon-ctn border-radius  red">
-        <img src="images/icon-study.svg" class="p-3">
-      </div>
-    
-      <div class="d-flex ctn bg-dark-blue p-4 border-radius">
-        <p><span class="fs-2">Study</span>
-          <br><span class="fw-1 fs-4 hour">4</span>
-        </p>
-
-
-        <p class="text-end">
-         ***<br><span class=" fw-1"> Last Week - 7 </span>
-         
-        </p>
-
-      </div>
+        <div class="ctn bg-dark-blue p-4 border-radius">
+          <div class="d-flex head">
+          <p class="fs-2">Work</p>
+          <p class="text-end">***</p>
+          </div>
+          
+          <div class="d-flex tail">
+            <p class="fw-1 fs-4 current-hour">32</p>
+            <p class=" fw-1 previous-hour text-start">Last Week - 36 </p>
+          </div>
+        </div>
+      </section>
+  
+      <section class="p-2" data-title="Play">
+        <div class="d-flex icon-ctn border-radius blue">
+          <img src="images/icon-play.svg" class="p-3">
+        </div>
       
-    </section>
-
-    <section class="p-2" data-title="Exercise">
-      <div class="d-flex icon-ctn border-radius  green">
-        <img src="images/icon-exercise.svg" class="p-3">
-      </div>
-
-      <div class="d-flex ctn bg-dark-blue p-4 border-radius">
-        <p><span class="fs-2">Exercise</span>
-          <br><span class="fw-1 fs-4 hour">4</span>
-        </p>
-        
-        <p class="text-end">
-         ***<br><span class=" fw-1 previous">Last Week - 5 </span>
+        <div class="ctn bg-dark-blue p-4 border-radius">
+          <div class="d-flex head">
+            <p class="fs-2">Play</p>
+            </p>
+            <p class="text-end">***</p>
+            
+          </div>
           
-        </p>
-        
-      </div>
-        
-    </section>
-
-    <section class="p-2" data-title="Social">
-      <div class="d-flex icon-ctn border-radius  violet">
-        <img src="images/icon-social.svg" class="p-3">
-      </div>
-    
-      <div class="d-flex ctn bg-dark-blue p-4 border-radius">
-        <p><span class="fs-2">Social</span>
-          <br><span class="fw-1 fs-4 hour">5</span>
-        </p>
-        
-        <p class="text-end">
-         ***<br><span class=" fw-1 previous">Last Week - 10</span>
+          <div class="d-flex tail">
+            
+            <p class="fw-1 fs-4 current-hour">10
+            </p>
+            <p class="fw-1 previous-hour text-start">Last Week - 8</p>
+          </div>
           
-        </p>
+        </div>
+      </section>
+  
+      <section class="p-2" data-title="Study">
+        <div class="d-flex icon-ctn border-radius  red">
+          <img src="images/icon-study.svg" class="p-3">
+        </div>
       
-      </div>
-       
-    </section>
+        <div class="ctn bg-dark-blue p-4 border-radius">
+          <div class="d-flex head">
+            <p class="fs-2">Study</p>
+            <p class="text-end">***</p>
+            
+          </div>
 
-    <section class="p-2" data-title="Self Care">
-      <div class="d-flex icon-ctn border-radius  yellow">
-        <img src="images/icon-self-care.svg" class="p-3">
-      </div>
-      
-      <div class="d-flex ctn bg-dark-blue p-4 border-radius">
-        <p><span class="fs-2">Self Care</span>
-          <br><span class="fw-1 fs-4 hour">2</span>
-        </p>
-
-        <p class="text-end">
-         ***<br><span class=" fw-1 previous">Last Week - 2 </span>
+          <div class="d-flex tail">
+            <p class="fw-1 fs-4 current-hour">4</p>
+            <p class=" fw-1 previous-hour text-start"> Last Week - 7 </p>
+          </div>
+        </div>
+      </section>
+  
+      <section class="p-2" data-title="Exercise">
+        <div class="d-flex icon-ctn border-radius  green">
+          <img src="images/icon-exercise.svg" class="p-3">
+        </div>
+  
+        <div class="ctn bg-dark-blue p-4 border-radius">
+          <div class="d-flex head">
+            <p class="fs-2">Exercise</p>
+            <p class="text-end">***</p>
+            
+          </div>
           
-        </p>
-      </div>
-    </section>
-  </main>
+          <div class="d-flex tail">
+            <p class="fw-1 fs-4 current-hour">4</p>
+            </p>
+              <p class=" fw-1 previous-hour text-start">Last Week - 5 </p>
+          </div>
+        </div>
+      </section>
+  
+      <section class="p-2" data-title="Social">
+        <div class="d-flex icon-ctn border-radius  violet">
+          <img src="images/icon-social.svg" class="p-3">
+        </div>
+      
+        <div class="ctn bg-dark-blue p-4 border-radius">
 
-  <footer class="p-1">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.<br>
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
+          <div class="d-flex head">
+            <p class="fs-2">Social</p>
+            <p class="text-end">***</p>
+            
+          </div>
 
+          <div class="d-flex tail">
+            <p class="fw-1 fs-4 current-hour">5</p>
+              <p class=" fw-1 previous-hour text-start">Last Week - 10</p>
+          </div>
+        </div>
+      </section>
+  
+      <section class="p-2" data-title="Self Care">
+        <div class="d-flex icon-ctn border-radius  yellow">
+          <img src="images/icon-self-care.svg" class="p-3">
+        </div>
+        
+        <div class="ctn bg-dark-blue p-4 border-radius">
+          <div class="d-flex head">
+            <p class="fs-2">Self Care</p>
+            <p class="text-end">***</p>
+          </div>
+          
+          <div class="d-flex tail">
+            <p class="fw-1 fs-4 current-hour">2</p>
+            <p class=" fw-1 previous-hour">Last Week - 2 </p>
+          </div>
+      
+        </div>
+      </section>
+
+      
+    </main>
+    <div class="btn-container next-two-ctn">
+      <i class="fa-solid fa-arrow-right btn next-btn-two" id="next-btn-two"></i>
+    </div>
+  </div>
+   <div class="rate-me-container">
+    <h1>Rate my schedule 🤠  </h1>
+    <div class="star-container">
+      <i class="fa-regular fa-star" data-star-index="1"></i>
+      <i class="fa-regular fa-star" data-star-index="2"></i>
+      <i class="fa-regular fa-star" data-star-index="3"></i>
+      <i class="fa-regular fa-star" data-star-index="4"></i>
+      <i class="fa-regular fa-star" data-star-index="5"></i>
+    </div>
+
+    <div class="text-container">
+      <p class="text">Your feedback is important 🖐 </p>
+    </div>
+    <div>
+      <button class="next-btn" id="prev-btn-two">Go Back</button>
+    </div>
+
+    <footer class="p-1">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.<br>
+      Coded by <a href="https://twitter.com/Techmad_01?t=hYl7LBgkGLSuULYkGZOVgA&s=09">Techmad</a>.
+    </footer>
+
+  </div>
+
+ 
+
+
+  <script src="https://kit.fontawesome.com/bc2fd59ebf.js" crossorigin="anonymous"></script>
   <script src="script.js"></script>
 </body>
 </html>
+

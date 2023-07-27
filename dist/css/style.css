@@ -15,25 +15,230 @@ a {
   text-decoration: none;
 }
 
-button {
-  background-color: hsl(235, 46%, 20%);
-  border: none;
-  color: hsl(235, 45%, 61%);
-  font-size: 18px;
- 
-}
-
-button:hover {
-  color: aqua;
+i, button {
   cursor: pointer;
 }
 
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+}
+.center-container .icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -4em;
+}
+.center-container .spin-wheel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.center-container .avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  margin: 1em 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.center-container .avatar-container .cover {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.center-container .avatar-container img {
+  width: 100%;
+  height: 100%;
+}
+.center-container .avatar-container img:hover {
+  width: 95%;
+  cursor: pointer;
+}
+.center-container .text-overlay {
+  position: absolute;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  display: none;
+  color: #f1c65b;
+  cursor: pointer;
+  margin: 4em 0;
+}
+
+.grid-container {
+  display: none;
+}
+.grid-container .next-two-ctn {
+  place-self: end;
+}
+.grid-container .btn {
+  font-size: 1rem;
+  color: hsl(235, 45%, 61%);
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 50%;
+  margin: 1em;
+  border: 1px solid hsl(235, 45%, 61%);
+  padding: 0.5em;
+}
+.grid-container .btn:hover {
+  background-color: hsl(235, 45%, 61%);
+  color: hsl(235, 46%, 20%);
+}
+
+.fadeInAnimation {
+  /* Apply the animation properties */
+  animation: fadeInWords 0.5s forwards;
+}
+
+.introduction {
+  display: none;
+  position: relative;
+  top: 4em;
+  padding: 1em;
+  text-align: center;
+  line-height: 2em;
+  font-size: 1.5rem;
+}
+
+.button-container {
+  position: relative;
+  text-align: center;
+  display: none;
+  top: 4.5em;
+  margin: 1em;
+}
+
+.next-btn {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.next-btn:hover {
+  background-color: #4acf81;
+  transition: 1s;
+  color: #7536d3;
+}
+
+.glow {
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+@keyframes individual-orbit {
+  0% {
+    transform: rotate(0deg) translateX(90px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(90px) rotate(-360deg);
+  }
+}
+@keyframes vibration {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+@keyframes fadeInWords {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.icon-container img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  animation: individual-orbit 4s linear infinite;
+  border-radius: 50%;
+  padding: 0.2em;
+}
+
+.icon-container img:nth-child(2) {
+  animation-delay: 0.67s;
+}
+
+.icon-container img:nth-child(3) {
+  animation-delay: 1.33s;
+}
+
+.icon-container img:nth-child(4) {
+  animation-delay: 2s;
+}
+
+.icon-container img:nth-child(5) {
+  animation-delay: 2.67s;
+}
+
+.icon-container img:nth-child(6) {
+  animation-delay: 3.33s;
+  transform: rotate(-50deg);
+}
+
 figure {
+  position: relative;
   color: white;
   background-color: hsl(246, 80%, 60%);
   font-weight: 300;
   align-items: center;
   height: 90px;
+  z-index: 2;
+}
+figure + div {
+  position: relative;
+  margin-top: -1em;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  color: hsl(235, 45%, 61%);
+  cursor: pointer;
+}
+figure + div :hover {
+  font-size: 20px;
 }
 figure img {
   width: 75px;
@@ -44,20 +249,58 @@ figure img {
 figure .name {
   font-size: 1.5rem;
 }
-figure + div {
-  position: relative;
-  margin-top: -1em;
-  z-index: -1;
-  align-items: center;
-  justify-content: space-between;
-}
 
 section p {
   line-height: 2em;
 }
 
-footer {
+.btn {
+  padding: 1em;
+}
+
+.ratebutton-container {
+  place-content: center;
+  padding: 1em;
+}
+
+.rate-me-container {
+  display: none;
   text-align: center;
+  height: 100vh;
+  /* CSS for the stars and text container */
+}
+.rate-me-container h1 {
+  font-size: 2rem;
+  margin: 1em 0;
+}
+.rate-me-container .star-container {
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+}
+.rate-me-container .star-container i {
+  color: #c0c0c0;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.rate-me-container .star-container i.fas {
+  color: gold;
+}
+.rate-me-container .text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+footer {
+  line-height: 2em;
+  text-align: center;
+}
+footer a {
+  color: hsl(15, 100%, 70%);
 }
 
 .d-flex {
@@ -76,10 +319,16 @@ footer {
   justify-content: space-between;
   align-items: center;
   margin-top: -2em;
+  cursor: pointer;
 }
 
-.text-end {
-  text-align: end;
+.head {
+  justify-content: space-between;
+}
+
+.tail {
+  justify-content: space-between;
+  align-items: first baseline;
 }
 
 .bg-dark-blue {
@@ -88,6 +337,10 @@ footer {
 
 .active {
   color: white;
+}
+
+.hover:hover {
+  color: hsl(235, 45%, 61%);
 }
 
 .p-1 {
@@ -138,26 +391,127 @@ footer {
   font-weight: 500;
 }
 
+.w-max {
+  width: 100%;
+}
+
+@media only screen and (min-width: 700px) {
+  body {
+    margin: 0 auto;
+    width: 600px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .p-1, .p-2, .p-3 {
+    padding: 0;
+  }
+  .grid-container {
+    display: none;
+    grid-template-columns: auto auto auto auto;
+    align-items: start;
+    gap: 20px;
+    justify-content: center;
+    height: 100vh;
+  }
+  .grid-container .btn-container {
+    align-self: center;
+  }
+  .grid-container .btn {
+    border: 2px solid hsl(235, 45%, 61%);
+    padding: 0.5em;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: hsl(235, 46%, 20%);
+    color: hsl(235, 45%, 61%);
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  .grid-container .btn:hover {
+    background-color: hsl(235, 45%, 61%);
+    color: hsl(235, 46%, 20%);
+    transition: 0.5s;
+  }
+  header {
+    display: grid;
+    padding: 0;
+    align-self: center;
+    width: 210px;
+  }
+  header .back-button {
+    position: absolute;
+    z-index: 20;
+    margin-bottom: 1em;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  header figure {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 210px;
+  }
+  header figure .name {
+    font-size: 2rem;
+  }
+  header figure + div {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    line-height: 2em;
+  }
+  main {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-self: center;
+    width: 100%;
+    gap: 20px;
+  }
+  main section {
+    padding: 0 0;
+    width: 210px;
+  }
+  main section .ctn {
+    padding: 1em;
+    height: 130px;
+  }
+  main section .ctn:hover {
+    background-color: hsl(235, 45%, 61%);
+  }
+  .ratebutton-container {
+    padding: 0;
+  }
+  .tail {
+    flex-direction: column;
+  }
+  .current-hour {
+    font-size: 2.5rem;
+  }
+  .previous-hour {
+    font-size: 11px;
+    position: relative;
+    top: -1em;
+  }
+}
 .orange {
-  background-color: hsl(15, 100%, 70%);
+  background-color: #ff8c66;
 }
 
 .blue {
-  background-color: hsl(195, 74%, 62%);
+  background-color: #56c2e6;
 }
 
 .red {
-  background-color: hsl(348, 100%, 68%);
+  background-color: #ff5c7c;
 }
 
 .green {
-  background-color: hsl(145, 58%, 55%);
+  background-color: #4acf81;
 }
 
 .violet {
-  background-color: hsl(264, 64%, 52%);
+  background-color: #7536d3;
 }
 
 .yellow {
-  background-color: hsl(43, 84%, 65%);
+  background-color: #f1c65b;
 }

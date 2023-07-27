@@ -19,7 +19,7 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
-
+Really nice challenge, I enjoyed it.
 ### The challenge
 
 Users should be able to:
