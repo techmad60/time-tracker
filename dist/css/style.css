@@ -30,7 +30,6 @@ i, button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -4em;
 }
 .center-container .spin-wheel {
   display: flex;
@@ -46,6 +45,7 @@ i, button {
   margin: 1em 0;
   border-radius: 50%;
   overflow: hidden;
+  position: absolute;
 }
 .center-container .avatar-container .cover {
   position: absolute;
@@ -71,7 +71,7 @@ i, button {
   display: none;
   color: #f1c65b;
   cursor: pointer;
-  margin: 4em 0;
+  /* margin: 4em 0; */
 }
 
 .grid-container {
