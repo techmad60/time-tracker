@@ -20,11 +20,12 @@ i, button {
 }
 
 .center-container {
-  display: flex;
+  display: grid;
   justify-content: center;
+  place-content: center;
   align-items: center;
   flex-direction: column;
-  height: 90vh;
+  height: 100vh;
 }
 .center-container .icon-container {
   display: flex;
